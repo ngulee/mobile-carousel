@@ -1,0 +1,58 @@
+@baseWidth:100%;
+@imgWidth:@baseWidth / 7;
+.my-block() {
+  display: block;
+  width: @baseWidth;
+}
+.carousel-container {
+  position: relative;
+  width: @baseWidth;
+  overflow: hidden;
+  .img-container {
+    width: 7 * @baseWidth;
+    transform: translateX(-@imgWidth);
+    .img-item {
+      position: relative;
+      width: @imgWidth;
+      float: left;
+      a {
+        .my-block();
+        span {
+          position: absolute;
+          padding: 0.5rem;
+          top: 0;
+          left: 0;
+          background: red;
+        }
+        img {
+          .my-block();
+        }
+      }
+    }
+  }
+  .focus-container {
+    position: absolute;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    font-size: 0;
+    border-radius: 10rem;
+    background: rgba(200, 200, 200, 0.5);
+    li {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.5);
+      margin-left: 0.5rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.active {
+        background: #fff;
+      }
+    }
+  }
+}

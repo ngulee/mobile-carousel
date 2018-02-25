@@ -1,0 +1,81 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  background: #f5f5f5;
+}
+html,
+body {
+  min-width: 320px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+*,
+::before,
+::after {
+  /* 去除元素默认的内外边距 */
+  margin: 0;
+  padding: 0;
+  /* 让元素以IE盒模型进行渲染 */
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-family: '微软雅黑', sans-serif;
+  /* 去除元素的点击高亮效果 */
+  -webkit-tap-highlight-color: transparent;
+}
+/* input标签扁平化 */
+input {
+  border: 0;
+  outline: none;
+  /* 清除浏览器为input标签添加的默认样式 */
+  -webkit-appearance: none;
+}
+/*  去除a标签的下划线 */
+a {
+  text-decoration: none;
+}
+/* 去掉有序列表、无序列表的前缀样式 */
+ol,
+ul {
+  list-style: none;
+}
+/* 清除浮动 */
+.clearfix::after {
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+/* 一像素底部边框 */
+.border-bottom {
+  position: relative;
+  border-bottom: none !important;
+}
+.border-bottom::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  -webkit-transform-origin: left bottom;
+  transform-origin: left bottom;
+}
+/* 2倍屏 */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .border-bottom::after {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+/* 3倍屏 */
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  .border-bottom::after {
+    -webkit-transform: scaleY(0.33);
+    transform: scaleY(0.33);
+  }
+}
+/*# sourceMappingURL=./base.css.map */

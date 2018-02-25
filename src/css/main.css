@@ -1,0 +1,55 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-container .img-container {
+  width: 700%;
+  transform: translateX(-14.28571429%);
+}
+.carousel-container .img-container .img-item {
+  position: relative;
+  width: 14.28571429%;
+  float: left;
+}
+.carousel-container .img-container .img-item a {
+  display: block;
+  width: 100%;
+}
+.carousel-container .img-container .img-item a span {
+  position: absolute;
+  padding: 0.5rem;
+  top: 0;
+  left: 0;
+  background: red;
+}
+.carousel-container .img-container .img-item a img {
+  display: block;
+  width: 100%;
+}
+.carousel-container .focus-container {
+  position: absolute;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  font-size: 0;
+  border-radius: 10rem;
+  background: rgba(200, 200, 200, 0.5);
+}
+.carousel-container .focus-container li {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  margin-left: 0.5rem;
+}
+.carousel-container .focus-container li:first-child {
+  margin-left: 0;
+}
+.carousel-container .focus-container li.active {
+  background: #fff;
+}
+/*# sourceMappingURL=./main.css.map */
